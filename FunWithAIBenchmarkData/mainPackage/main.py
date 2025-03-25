@@ -1,21 +1,39 @@
 # main.py
 # Bill Nicholson
 # nicholdw@ucmail.uc.edu
+# Luke Elmore and Vanshika Rana
+# Emails : elmorels@mail.uc.edu and ranava@mail.uc.edu
+# class: 4010-002
+# due date: 3/27/2025
+# This module takes our team name and give you an image and prints image of a GPU
+# citations: ChatGPT
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import matplotlib.image as img
 from readingLevelPackage.readingLevel import Reading_Level
 from utilitiesPackage.utilities import *
 from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
 
 if __name__ == "__main__":
-   
-    img = mpimg.imread("image/aim_powerpc601.jpg")
-    plt.imshow(img)
-    plt.axis('off')
-    plt.title("Team: AIM PowerPC 601")
+  
+    img1 = mpimg.imread("image/aim_powerpc601.jpg")
+    img2 = mpimg.imread("image/2070_super.jpg")
+
+    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+
+    axes[0].imshow(img1)
+    axes[0].axis('off')
+    axes[0].set_title("Team: AIM PowerPC 601")
+
+    axes[1].imshow(img2)
+    axes[1].axis('off')
+    axes[1].set_title("2070 Super")
+
+    plt.tight_layout()
     plt.show()
+    
 
 
     CSV_Processor = MMLU_CSV_Processor("dataPackage/MMLU/data/", ["management_test.csv"])
