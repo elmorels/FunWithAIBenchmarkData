@@ -2,12 +2,21 @@
 # Bill Nicholson
 # nicholdw@ucmail.uc.edu
 
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 from readingLevelPackage.readingLevel import Reading_Level
 from utilitiesPackage.utilities import *
 from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
 
 if __name__ == "__main__":
+   
+    img = mpimg.imread("image/aim_powerpc601.jpg")
+    plt.imshow(img)
+    plt.axis('off')
+    plt.title("Team: AIM PowerPC 601")
+    plt.show()
+
 
     CSV_Processor = MMLU_CSV_Processor("dataPackage/MMLU/data/", ["management_test.csv"])
     questions = CSV_Processor.read_data()
