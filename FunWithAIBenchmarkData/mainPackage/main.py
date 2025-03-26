@@ -1,12 +1,18 @@
 # main.py
 # Bill Nicholson
 # nicholdw@ucmail.uc.edu
-# Luke Elmore and Vanshika Rana
-# Emails : elmorels@mail.uc.edu and ranava@mail.uc.edu
-# class: 4010-002
-# due date: 3/27/2025
-# This module takes our team name and give you an image and prints image of a GPU
-# citations: ChatGPT
+# File Name : main.py
+# Student Name: Luke Elmore, Vanshika Rana
+# email:  elmorels@mail.uc.edu, ranava@mail.uc.edu
+# Assignment Number: Assignment 08
+# Due Date:   03/27/2025 
+# Course #/Section:   IS 4010-002
+# Semester/Year:  Spring 2025
+# Brief Description of the assignment: This assignment is a group project under which we had to fork a given Python repo, add a team image and create data visualization, then submit via GitHub.
+# Brief Description of what this module does: This module is about exploring AI benchmark data and learning how to process and structure it using Python tools and CSV files.
+# Citations: We used ChatGPT AI Model. 
+# Anything else that's relevant: N/A
+
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -15,7 +21,7 @@ from readingLevelPackage.readingLevel import Reading_Level
 from utilitiesPackage.utilities import *
 from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
-
+from GraphicPackage.Graphic import *
 if __name__ == "__main__":
   
     img1 = mpimg.imread("image/aim_powerpc601.jpg")
@@ -33,7 +39,8 @@ if __name__ == "__main__":
 
     plt.tight_layout()
     plt.show()
-    
+
+    plot_readability_chart()
 
 
     CSV_Processor = MMLU_CSV_Processor("dataPackage/MMLU/data/", ["management_test.csv"])
