@@ -24,8 +24,14 @@
     <Compile Include="dataPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GraphicPackage\Graphic.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mainPackage\main.py" />
     <Compile Include="mainPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphicPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PDFPackage\PDFUtilities.py">
@@ -57,6 +63,7 @@
     <Folder Include="dataPackage\MMLU\results\" />
     <Folder Include="mainPackage\" />
     <Folder Include="image\" />
+    <Folder Include="GraphicPackage\" />
     <Folder Include="PDFPackage\" />
     <Folder Include="readingLevelPackage\" />
     <Folder Include="utilitiesPackage\" />
